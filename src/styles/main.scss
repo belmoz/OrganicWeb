@@ -199,12 +199,14 @@ body {
 		box-sizing: border-box;
 		transition: all 0.3s ease 0s;
 		overflow: hidden;
-
 		&:hover > .slider-text {
 			transform: translateY(0);
 		}
 		&:focus {
 			outline: none;
+		}
+		&:hover {
+			box-shadow: inset 0 0 0 3px rgba($gray, $alpha);
 		}
 	}
 	&-hover {
@@ -220,12 +222,9 @@ body {
 			border-radius: 20px;
 			transition: all 0.3s ease 0s;
 		}
-		&:hover {
-			box-shadow: inset 0 0 0 1px rgba($gray, 0);
-		}
 		&:hover::before {
 			background-color: rgba($white, 0.55);
-			box-shadow: inset 0 0 0 3px rgba($gray, $alpha);
+			box-shadow: inset 0 0 0 3px rgba($gray, 0.3);
 		}
 	}
 	&-milk {
@@ -546,6 +545,9 @@ body {
 		box-sizing: border-box;
 		transition: all 0.3s ease 0s;
 		overflow: hidden;
+		&:hover {
+			box-shadow: inset 0 0 0 3px rgba($gray, $alpha);
+		}
 	}
 	&-thumb {
 		position: relative;
@@ -633,47 +635,106 @@ body {
 	}
 	&__minus {
 		background-image: url("../img/minus_b.svg");
-		background-size: 40px 40px;
 	}
 	&__plus {
 		background-image: url("../img/plus_b.svg");
-		background-size: 40px 40px;
 	}
 }
-.catalog-upload {
-	width: 100%;
-	text-align: center;
-	&__btn {
-		position: relative;
+.btn-upload {
+	background-color: transparent;
+	border: none;
+	text-transform: uppercase;
+	opacity: 0.8;
+	position: relative;
+	display: flex;
+	justify-content: center;
+	margin: 0 auto;
+	padding-left: 2.43rem;
+	letter-spacing: 0.06rem;
+	transition: all 0.3s ease 0s;
+	cursor: pointer;
+	&:focus {
+		outline: none;
+	}
+	&:before {
+		content: "";
+		display: block;
+		width: 1.563rem;
+		height: 1.563rem;
+		background-image: url("../img/icons/refresh.png");
+		background-size: cover;
+		background-repeat: no-repeat;
+		position: absolute;
+		left: 0;
+		top: calc(50% - 0.78rem);
+	}
+	&:hover,
+	&:hover:before {
+		opacity: 1;
+	}
+}
+.section-delivery {
+	padding-top: 19px;
+	padding-bottom: 139px;
+	&__text {
 		color: $gray;
-		opacity: 0.8;
 		font-family: "Jost", sans-serif;
-		text-transform: uppercase;
-		letter-spacing: 0.081rem;
-		font-weight: 500;
-		border: none;
-		background: none;
-		padding-left: 2.44rem;
-		left: 5px;
-		cursor: pointer;
-		transition: all 0.3s ease 0s;
-		&:focus {
-			outline: none;
+		font-size: 1.125rem;
+		line-height: 1.69rem;
+	}
+	&__span {
+		color: $orange;
+	}
+	&__link {
+		color: $gray;
+	}
+}
+.box-delivery {
+	display: flex;
+	align-items: space-between;
+	margin-top: 65px;
+	&-item {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		flex: 0 1 49%;
+		&:last-child {
+			margin: 0 auto;
+			flex: 0 1 35%;
 		}
-		&:before {
-			content: url("../img/icons/refresh.png");
-			width: 25px;
-			height: 25px;
-			position: absolute;
-			top: 50%;
-			left: 0;
-			transform: translate(0, -50%);
+	}
+	&-list {
+		display: flex;
+		align-items: center;
+		list-style-type: none;
+		margin-bottom: 20px;
+		&__item {
+			margin-right: 30px;
+			display: block;
+			background-repeat: no-repeat;
+			background-size: auto;
+			background-position: center;
+			cursor: pointer;
+			opacity: 0.4;
 			transition: all 0.3s ease 0s;
-			opacity: 0.8;
+			&:hover {
+				opacity: 1;
+			}
 		}
-		&:hover,
-		&:hover:before {
-			opacity: 1;
+		&__mc {
+			background-image: url("../img/icons/mastercard.png");
+			width: 53px;
+			height: 32px;
+		}
+		&__visa {
+			background-image: url("../img/icons/visa.png");
+			width: 74px;
+			height: 23px;
+		}
+		&__paypal {
+			background-image: url("../img/icons/paypal.png");
+			width: 87px;
+			height: 24px;
 		}
 	}
 }
