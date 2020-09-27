@@ -752,7 +752,7 @@ body {
 	background-position: center;
 	background-repeat: no-repeat;
 	padding-top: 45px;
-	padding-bottom: 139px;
+	padding-bottom: 160px;
 	&__text {
 		color: $gray;
 		font-family: "Jost", sans-serif;
@@ -841,6 +841,9 @@ body {
 		&:focus {
 			outline: none;
 			border: 1px solid $gray;
+		}
+		&::placeholder {
+			opacity: $alpha;
 		}
 	}
 	&__text {

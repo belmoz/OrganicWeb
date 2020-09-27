@@ -31,6 +31,13 @@
     width: 120px;
     height: 32px;
     margin-right: 120px;
+    background-size: contain;
+    transition: all 0.3s ease 0s;
+    &:hover {
+        width: 136px;
+        height: 36px;
+        margin-right: 104px;
+    }
 }
 .nav {
     list-style-type: none;
@@ -59,13 +66,18 @@
     &__button {
         width: 2.5rem;
         height: 2.5rem;
-        background-color: #d26a22;
+        background-color: $orange;
         border: none;
         border-radius: 50%;
         background-image: url("data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAOCAYAAAAmL5yKAAAA3klEQVQokaWSP0vCURSGn2M2lF+hwcEP0CCutTsL0hTo1BzN+k36EO66BoFTBNEgLc1C0fiIcM2f+vuT9MKFe86573vOfe/FXQw5EjVgnNYSuD5WIDYbdQJcRsRFijvATQX/pZ4JZkBXbUXEO9ACbguI58Ap0PvNqO3kxqCspVpT39TX9T5bOFGX6mOFQD81Opxu7YO6KCGHOlc/1Hregfuk3iwQ6Kb6XVGHttX4VM82nP0x5sAo+7w5eI6In5L6P6FeJS8ae9fLzef58JVcePhLfvsRtpgC38BTZR5YAYPx0/z9iCTHAAAAAElFTkSuQmCC");
         background-size: 1rem 0.87rem;
         background-repeat: no-repeat;
         background-position: center center;
+        transition: all 0.3s ease 0s;
+        &:hover {
+            cursor: pointer;
+            background-color: $gray;
+        }
     }
     &__count {
         position: absolute;
