@@ -63,6 +63,9 @@
 	}
 }
 .box-footer-social {
+	display: flex;
+	justify-content: space-between;
+	margin: 0 3px;
 	&__item {
 		display: block;
 		width: 46px;
@@ -71,6 +74,7 @@
 		opacity: 0.8;
 		border-radius: 100%;
 		transition: all 0.3s ease 0s;
+		text-align: center;
 		&:hover {
 			opacity: 1;
 		}
@@ -78,16 +82,18 @@
 	&__link {
 		display: block;
 		content: "";
-		width: 100%;
 		height: 100%;
 	}
 	&__vk {
-		background: url("../../../img/icons/vk.png") center no-repeat;
+		background: url("../../../img/icons/vk.svg") center no-repeat;
+		background-size: 23px 28px;
 	}
 	&__inst {
-		background: url("../../../img/icons/instagramm.png") center no-repeat;
+		background: url("../../../img/icons/instagram.svg") center no-repeat;
+		background-size: 18px 18px;
 	}
 	&__fb {
-		background: url("../../../img/icons/facebook.png") center no-repeat;
+		background: url("../../../img/icons/facebook.svg") center no-repeat;
+		background-size: 18px 18px;
 	}
 }
