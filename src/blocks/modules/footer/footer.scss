@@ -1,38 +1,75 @@
 .footer {
 	border-top: 1px solid $gray;
-	padding-top: 81px;
-	padding-bottom: 83px;
+	padding-top: 40px;
+	padding-bottom: 35px;
 	.logo {
 		width: 179px;
 		height: 48px;
 		background-size: contain;
 		margin-right: 0;
 		margin-top: 6px;
+		@media (max-width: 768px) {
+			margin-bottom: 26px;
+		}
+		@media (max-width: 580px) {
+			width: 120px;
+			height: 32px;
+		}
 	}
 }
 .box-footer {
 	display: flex;
 	justify-content: space-between;
+	@media (max-width: 768px) {
+		flex-direction: column;
+		align-items: center;
+		text-align: center;
+	}
 	&-item {
 		display: flex;
 		justify-content: space-between;
 		flex: 0 0 66.3%;
+		@media (max-width: 1200px) {
+			flex: 0 0 72%;
+		}
+		@media (max-width: 768px) {
+			flex-direction: column;
+		}
+	}
+	&-info {
+		@media (max-width: 768px) {
+			margin-bottom: 12px;
+		}
 	}
 }
 .box-footer-social {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+	@media (max-width: 768px) {
+		max-width: 250px;
+		margin: 40px auto 0;
+	}
 }
 .box-copyright {
 	display: flex;
 	justify-content: space-between;
 	margin-top: 19px;
 	color: rgba($gray, 0.6);
+	@media (max-width: 768px) {
+		flex-direction: column;
+		text-align: center;
+	}
+	@media (max-width: 580px) {
+		font-size: 0.625rem;
+		margin-top: 8px;
+		p {
+			margin-bottom: 5px;
+		}
+	}
 	&__link {
 		text-decoration: none;
 		color: rgba($gray, 0.6);
-		font-size: 1.125rem;
 		transition: all 0.3s ease 0s;
 		&:hover {
 			color: rgba($gray, 1);
@@ -43,38 +80,63 @@
 .box-footer-social {
 	list-style-type: none;
 	font-size: 1.125rem;
+	@media (max-width: 580px) {
+		font-size: 0.75rem;
+	}
 	&__item {
-		margin-bottom: 1.625rem;
+		margin-bottom: 42px;
+		@media (max-width: 768px) {
+			margin-bottom: 8px;
+		}
 	}
 	&__link {
 		text-decoration: none;
 		color: $gray;
 		font-size: 1.125rem;
 		transition: all 0.3s ease 0s;
+		@media (max-width: 580px) {
+			font-size: 0.75rem;
+		}
 		&:hover {
 			color: $orange;
 		}
 	}
 	&__tel {
-		margin-bottom: 1.875rem;
+		margin-bottom: 30px;
 		.box-footer-list__link {
 			font-size: 1.688rem;
+			@media (max-width: 580px) {
+				font-size: 1.875rem;
+			}
+		}
+	}
+}
+.box-footer-list {
+	&__first {
+		@media (max-width: 768px) {
+			display: flex;
+			& > .box-footer-list__item {
+				margin: 0 15px 10px;
+			}
 		}
 	}
 }
 .box-footer-social {
 	display: flex;
 	justify-content: space-between;
-	margin: 0 3px;
+	@media (max-width: 580px) {
+		margin: 34px 34px 0;
+	}
 	&__item {
 		display: block;
-		width: 46px;
+		width: 46px; // + border 2px
 		height: 46px;
 		border: 2px solid $gray;
 		opacity: 0.8;
 		border-radius: 100%;
 		transition: all 0.3s ease 0s;
-		text-align: center;
+		// text-align: center;
+
 		&:hover {
 			opacity: 1;
 		}
